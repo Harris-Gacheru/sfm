@@ -27,15 +27,18 @@
                 <input type="email" formControlName="email">
                 <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['required'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter email</p>
                 <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['email'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a valid email</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['pattern'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a company email</p>
                 
                 <label for="phone">Phone Number</label>
                 <input type="text" formControlName="phone">
                 <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['required'] && addStudentForm.get('contactDetails.phone')!.touched">* Please enter phone number</p>
-                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['maxlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Can be max of 10 numbers</p>
-                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['minlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Should be 10 numbers</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['maxlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Max of 10 digits</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['minlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Should be 10 digits</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['pattern'] && addStudentForm.get('contactDetails.phone')!.touched">*Numbers only</p>
             </div>
 
-            <button type="submit" [disabled]="addStudentForm.invalid">Add Student</button>
+            <button type="submit" >Add Student</button>
         </form>
     </div>
+    <app-footer></app-footer>
 </div>

@@ -1,9 +1,13 @@
 <div class="wrapper">
    <app-navbar></app-navbar>
     <div class="content">
+        <h4>Students with Balance</h4>
         <p *ngIf="students.length === 0">No students available!</p>
         
         <div class="disp">
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
             <table>
                 <thead>
                     <th>#</th>
@@ -30,4 +34,5 @@
             </table>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>

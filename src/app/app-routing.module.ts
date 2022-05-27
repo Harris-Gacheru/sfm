@@ -20,8 +20,8 @@ const routes: Routes = [
       {path: ':regno/edit', component: EditstudentComponent}
     ]
   },
-  {path:'withbalance', component: StudentswithbalanceComponent},
-  {path:'withoutbalance', component: StudentswithoutbalanceComponent},
+  {path:'withbalance', component: StudentswithbalanceComponent, canActivate: [AuthGuard]},
+  {path:'withoutbalance', component: StudentswithoutbalanceComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: '**', component: PagenotfoundComponent}
 ];

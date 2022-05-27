@@ -32,7 +32,7 @@ export class EditstudentComponent implements OnInit {
 
     setTimeout(() => {
       this.msg = ''
-      this.router.navigate(['allstudents'])
+      this.router.navigate(['../'],{relativeTo:this.route})
     }, 1400)
   }
 
