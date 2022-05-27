@@ -1,0 +1,13 @@
+<div class="wrapper" *ngIf="student">
+    <h4>Edit {{ student.name }}'s Balance</h4>
+    <p class="success" *ngIf="msg">{{ msg }}</p>
+    <div class="content">
+        <form #form="ngForm">
+            <div class="form-group">
+                <label for="balance">Balance</label>
+                <input type="string" class="form-control" #balance value="{{ student.balance }}">
+            </div>
+            <button (click)="updateBalance(balance.value)">Edit Balance</button>
+        </form>
+    </div>
+</div>

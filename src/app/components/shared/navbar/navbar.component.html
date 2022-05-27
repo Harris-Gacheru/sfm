@@ -1,0 +1,33 @@
+<nav>
+    <a href="#" class="navbar-brand">
+        <img src="../../../../assets/logo.png" alt="logo" class="logo">
+        Soweto Complex
+    </a>
+
+    <ul class="nav-options">
+        <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/addstudent" routerLinkActive="active" class="nav-link">Add Students</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/allstudents" routerLinkActive="active" class="nav-link">All Students</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/withbalance" routerLinkActive="active" class="nav-link">Students with Balance</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/withoutbalance" routerLinkActive="active" class="nav-link">Students without Balance</a>
+        </li>
+    </ul>
+
+    <ul class="auth-options">
+        <li class="nav-item" *ngIf="!isLoggedIn">
+            <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+            <a (click)="logout()" class="nav-link logout">Logout</a>
+        </li>
+    </ul>
+</nav>

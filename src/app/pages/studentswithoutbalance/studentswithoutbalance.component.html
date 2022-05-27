@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <p *ngIf="students.length === 0">No students available!</p>
+        
+        <div class="disp">
+            <table>
+                <thead>
+                    <th>#</th>
+                    <th>Reg No</th>
+                    <th>Student Name</th>
+                    <th>School</th>
+                    <th>Course</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Balance</th>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let student of students; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ student.regNo }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.school }}</td>
+                        <td>{{ student.course }}</td>
+                        <td>{{ student.contactDetails.email }}</td>
+                        <td>{{ student.contactDetails.phone }}</td>
+                        <td>{{ student.balance }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

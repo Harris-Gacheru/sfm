@@ -1,0 +1,21 @@
+<div class="wrapper" *ngIf="student">
+    <h4>Student Details</h4>
+    <p class="success" *ngIf="msg">{{ msg }}</p>
+    <div class="content">
+        <div class="info">
+            <p class="regno"><span>Reg No: </span>{{ student.regNo }}</p>
+            <p><span>Student Name: </span>{{ student.name }}</p>
+            <p><span>School: </span>{{ student.school }}</p>
+            <p><span>Course: </span>{{ student.course }}</p>
+            <p><span>Email: </span>{{ student.contactDetails.email }}</p>
+            <p><span>Phone: </span>{{ student.contactDetails.phone }}</p>
+            <p><span>Balance: </span>{{ student.balance }}</p>
+        </div>
+
+        <div class="actions">
+            <a [routerLink]="['/allstudents', student.regNo, 'edit']" class="edit">Edit</a>
+            
+            <a (click)="deleteStudent(student.regNo)" class="delete">Delete</a>
+        </div>
+    </div>
+</div>

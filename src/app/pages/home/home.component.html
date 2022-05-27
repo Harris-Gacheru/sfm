@@ -1,0 +1,15 @@
+<div class="wrapper">
+   <app-navbar></app-navbar>
+    <div class="content">
+        <div class="welcome-txt">
+            <h4>Welcome to Soweto Complex Fee Management Portal</h4>
+
+            <p *ngIf="!isLoggedIn">Would you like to: </p>
+            <p *ngIf="isLoggedIn">You are <span [style]="{color:'green'}">logged in</span>. Would you like to: </p>
+            <a routerLink="/login" class="login" *ngIf="!isLoggedIn">Login</a>
+            <a (click)="logout()" class="logout" *ngIf="isLoggedIn">Logout</a>
+
+            <p *ngIf="msg" class="success">{{ msg }}</p>
+        </div>
+    </div>
+</div>

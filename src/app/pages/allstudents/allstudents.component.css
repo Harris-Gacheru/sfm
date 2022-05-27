@@ -1,0 +1,38 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.content{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.students-list{
+    width: 20vw;
+}
+
+.students-list li{
+    padding: 15px 10px;
+    list-style: none;
+}
+
+.students-list li:nth-child(odd){
+    background-color: #efefef;
+}
+
+.students-list a{
+    color: #000;
+}
+
+.students-list .active{
+    color: #7824c7;
+    text-decoration: none;
+}
+
+.display{
+    width: 50vw;
+}

@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <div class="students-list">
+            <h4>Students</h4>
+            
+            <p *ngIf="students.length === 0">No students available!</p>
+
+            <ul>
+                <li *ngFor="let student of students">
+                    <a [routerLink]="['/allstudents', student.regNo]" routerLinkActive="active">{{ student.name }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="display">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

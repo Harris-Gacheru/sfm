@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <form [formGroup]="addStudentForm" (ngSubmit)="onSubmit()">
+            <p *ngIf="msg" class="success">{{ msg }}</p>
+            <h4>Add Student</h4>
+            <label for="reg">Registration Number</label>
+            <input type="text" formControlName="regNo">
+            <p class="error" *ngIf="addStudentForm.get('regNo')!.invalid && addStudentForm.get('regNo')!.touched">* Please enter a Registration Number</p>
+                        
+            <label for="name">Student Name</label>
+            <input type="text" formControlName="name">
+            <p class="error" *ngIf="addStudentForm.get('name')!.invalid && addStudentForm.get('name')!.touched">* Please enter student's name</p>
+            
+            <label for="school">School</label>
+            <input type="text" formControlName="school">
+            <p class="error" *ngIf="addStudentForm.get('school')!.invalid && addStudentForm.get('school')!.touched">* Please enter school</p>
+            
+            <label for="course">Course</label>
+            <input type="text" formControlName="course">
+            <p class="error" *ngIf="addStudentForm.get('course')!.invalid && addStudentForm.get('course')!.touched">* Please enter course</p>
+
+            <div formGroupName="contactDetails">
+                <h5>Contact Details</h5>
+                
+                <label for="email">Email</label>
+                <input type="email" formControlName="email">
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['required'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter email</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['email'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a valid email</p>
+                
+                <label for="phone">Phone Number</label>
+                <input type="text" formControlName="phone">
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['required'] && addStudentForm.get('contactDetails.phone')!.touched">* Please enter phone number</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['maxlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Can be max of 10 numbers</p>
+                <p class="error" *ngIf="addStudentForm.get('contactDetails.phone')!.errors?.['minlength'] && addStudentForm.get('contactDetails.phone')!.touched">*Should be 10 numbers</p>
+            </div>
+
+            <button type="submit" [disabled]="addStudentForm.invalid">Add Student</button>
+        </form>
+    </div>
+</div>
