@@ -12,7 +12,7 @@
 }
 
 form{
-    width: 400px;
+    width: 600px;
     padding: 20px 30px;
     border-radius: 4px;
     box-shadow: 0px 0px 1px #888888;
@@ -29,6 +29,16 @@ h4{
 h5{
     font-size: 16px;
     font-weight: 700;
+}
+
+.form-group{
+    display: flex;
+    gap: 15px;
+}
+
+
+.form-group > div{
+    width: 100%;
 }
 
 label{
