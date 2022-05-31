@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { DisplaystudentComponent } from './components/allstudents/displaystudent/displaystudent.component';
 import { EditstudentComponent } from './components/allstudents/editstudent/editstudent.component';
+import { InstructionComponent } from './components/allstudents/instruction/instruction.component';
 import { AddstudentComponent } from './pages/addstudent/addstudent.component';
 import { AllstudentsComponent } from './pages/allstudents/allstudents.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'allstudents', component: AllstudentsComponent, canActivate: [AuthGuard], 
     children: [
       {path:':regno', component: DisplaystudentComponent},
-      {path: ':regno/edit', component: EditstudentComponent}
+      {path: ':regno/edit', component: EditstudentComponent},
+      {path: '', component: InstructionComponent}
     ]
   },
   {path:'withbalance', component: StudentswithbalanceComponent, canActivate: [AuthGuard]},

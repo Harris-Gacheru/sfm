@@ -6,7 +6,9 @@
         
         <div class="disp">
             <div class="search">
-                <input type="text" placeholder="Search...">
+                <form [formGroup]="searchForm">
+                    <input type="text" placeholder="Search..." formControlName="searchString">
+                </form>
             </div>
             <table>
                 <thead>

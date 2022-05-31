@@ -19,7 +19,7 @@ export class StudentService {
     },
     {
       regNo: 'tjc-004-085',
-      name: 'Anna', 
+      name: 'Anna Bree', 
       school: 'COPA', 
       course: 'BBIT', 
       balance : 0, 
@@ -30,7 +30,7 @@ export class StudentService {
     },
     {
       regNo: 'tjc-004-104',
-      name: 'Nancy', 
+      name: 'Nancy Wangeci', 
       school: 'African Nazarene', 
       course: 'CS', 
       balance : 0, 
@@ -40,24 +40,24 @@ export class StudentService {
       } 
     },
     {
-      regNo: 'tjc-004-085',
-      name: 'Anna', 
+      regNo: 'tjc-004-084',
+      name: 'Tracy ', 
       school: 'COPA', 
       course: 'BBIT', 
       balance : 234, 
       contactDetails: { 
-          email: 'anna@gmail.com', 
+          email: 'tracy@gmail.com', 
           phone: '0753323456' 
       } 
     },
     {
-      regNo: 'tjc-004-085',
-      name: 'Anna', 
+      regNo: 'tjc-004-089',
+      name: 'Lillian Waita', 
       school: 'COPA', 
       course: 'BBIT', 
       balance : 1234, 
       contactDetails: { 
-          email: 'anna@gmail.com', 
+          email: 'lilly@gmail.com', 
           phone: '0753323456' 
       } 
     }

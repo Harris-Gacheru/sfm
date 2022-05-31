@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisplaystudentComponent } from './components/allstudents/displaystudent/displaystudent.component';
 import { EditstudentComponent } from './components/allstudents/editstudent/editstudent.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { InstructionComponent } from './components/allstudents/instruction/instruction.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     PagenotfoundComponent,
     DisplaystudentComponent,
     EditstudentComponent,
-    FooterComponent
+    FooterComponent,
+    InstructionComponent
   ],
   imports: [
     BrowserModule,

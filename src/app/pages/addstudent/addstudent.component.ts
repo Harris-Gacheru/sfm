@@ -17,7 +17,7 @@ export class AddstudentComponent implements OnInit {
     course: ['', Validators.required],
     balance: [0],
     contactDetails: this.fb.group({
-      email: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-zA-Z0-9_.+-]+@thejitu.com+$/)]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-z]+@thejitu.com$/)]],
       phone: ['', [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern(/^[0-9]*$/)]]
     })
   })

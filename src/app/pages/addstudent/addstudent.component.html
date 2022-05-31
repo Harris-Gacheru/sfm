@@ -43,7 +43,7 @@
                         <input type="email" formControlName="email">
                         <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['required'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter email</p>
                         <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['email'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a valid email</p>
-                        <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['pattern'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a company email</p>
+                        <p class="error" *ngIf="addStudentForm.get('contactDetails.email')!.errors?.['pattern'] && addStudentForm.get('contactDetails.email')!.touched">* Please enter a valid school email</p>
                     </div>
                     <div>
                         <label for="phone">Phone Number</label>
