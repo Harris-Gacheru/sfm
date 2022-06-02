@@ -75,6 +75,8 @@ button{
     text-transform: uppercase;
     border-radius: 3px;
     background-color: #d1d0d0;
+    color: #fff;
+    font-weight: 700;
 }
 
 button:hover{
